@@ -1,0 +1,126 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOLS5mfkjYhWVg3eaKJRoCi",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vtu28116-jpg/VTU28116-python-record-/blob/main/TASK-2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JFRVEH7RuSkw",
+        "outputId": "52fcad07-905e-4128-ba9c-1ec9703ebf79"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the room temperature: 21\n",
+            "Comfortable\n"
+          ]
+        }
+      ],
+      "source": [
+        "#temperature Alert system\n",
+        "temperature = int(input(\"Enter the room temperature: \"))\n",
+        "if temperature < 18:\n",
+        "    print(\"Too cold\")\n",
+        "elif 18 <= temperature <= 25:\n",
+        "    print(\"Comfortable\")\n",
+        "else:\n",
+        "    print(\"Too Hot\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Password Retry system\n",
+        "Correct_password= \"admin123\"\n",
+        "attempts = 0\n",
+        "while attempts < 3:\n",
+        "    password = input(\"Enter password: \")\n",
+        "    if password == Correct_password:\n",
+        "        print(\"Access granted\")\n",
+        "        break\n",
+        "    else:\n",
+        "        print(\"Incorrect password\")\n",
+        "        attempts += 1\n",
+        "if attempts == 3:\n",
+        "    print(\"Access denied\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6dBuzbDIudY2",
+        "outputId": "c04e93e3-64d5-455f-a0fb-d863dc788265"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter password: admin123\n",
+            "Access granted\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Factorial Finder\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "factorial = 1\n",
+        "for i in range(1, num + 1):\n",
+        "    factorial *= i\n",
+        "print(\"Factorial of\", num, \"is\", factorial)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oh1uuoQluh1u",
+        "outputId": "35ecef8c-1f89-41c3-ed43-dd87f0d3163f"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 2\n",
+            "Factorial of 2 is 2\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
