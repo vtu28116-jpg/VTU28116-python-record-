@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM0EK6rZCd9cBQU1sn9cILU",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/vtu28116-jpg/VTU28116-python-record-/blob/main/TASK-9\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_j8lnvmRn7sK",
+        "outputId": "a23d4f93-aa37-4883-f6b5-10df68a4da9a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter student marks (0–100): 7\n",
+            "Marks accepted: 7.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Student Marks Validation with Exception Handling\n",
+        "\n",
+        "def validate_marks():\n",
+        "    try:\n",
+        "        marks = float(input(\"Enter student marks (0–100): \"))\n",
+        "        if marks < 0 or marks > 100:\n",
+        "            raise ValueError(\"Marks must be between 0 and 100!\")\n",
+        "        print(f\"Marks accepted: {marks}\")\n",
+        "    except ValueError as e:\n",
+        "        print(\"Error:\", e)\n",
+        "\n",
+        "# Main program\n",
+        "validate_marks()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Division Calculator with Exception Handling\n",
+        "\n",
+        "def divide_numbers():\n",
+        "    try:\n",
+        "        num1 = float(input(\"Enter numerator: \"))\n",
+        "        num2 = float(input(\"Enter denominator: \"))\n",
+        "        result = num1 / num2\n",
+        "        print(f\"Result = {result}\")\n",
+        "    except ZeroDivisionError:\n",
+        "        print(\"Error: Division by zero is not allowed!\")\n",
+        "    except ValueError:\n",
+        "        print(\"Error: Please enter valid numbers only!\")\n",
+        "\n",
+        "# Main program\n",
+        "divide_numbers()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DTYJk2FuoD0b",
+        "outputId": "2aa825a3-dde7-441b-9f85-1c9097128ab4"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter numerator: 56\n",
+            "Enter denominator: 67\n",
+            "Result = 0.835820895522388\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
